@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     message: 'Welcome to the node application',
-    currentYear: new Date().getFullYear()
+
 
   })
 });
@@ -47,10 +47,16 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
-    currentYear: new Date().getFullYear()
   })
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    message: 'Here are my projects',
+
+  })
+})
 // /bad send back json with errorMessage
 
 app.get('/bad', (req, res) => {
